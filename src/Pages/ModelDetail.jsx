@@ -11,7 +11,7 @@
 //     useEffect(() => {
 //         const fetchModel = async () => {
 //             try {
-//                 const res = await fetch(`http://localhost:3000/models/${id}`);
+//                 const res = await fetch(`https://ai-server-hazel.vercel.app/models/${id}`);
 //                 const data = await res.json();
 //                 setModel(data.result);
 //             } catch (err) {
@@ -39,7 +39,7 @@
 //             confirmButtonText: "Yes, delete it!"
 //         }).then((result) => {
 //             if (result.isConfirmed) {
-//                 fetch(`http://localhost:3000/models/${model._id}`, {
+//                 fetch(`https://ai-server-hazel.vercel.app/models/${model._id}`, {
 //                     method: "DELETE",
 //                     headers: {
 //                         "Content-Type": "application/json",
@@ -120,7 +120,7 @@ const ModelDetail = () => {
     useEffect(() => {
         const fetchModel = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/models/${id}`);
+                const res = await fetch(`https://ai-server-hazel.vercel.app/models/${id}`);
 
 
                 if (!res.ok) {
@@ -160,7 +160,7 @@ const ModelDetail = () => {
 
                 const deleteModel = async () => {
                     try {
-                        const res = await fetch(`http://localhost:3000/models/${model._id}`, {
+                        const res = await fetch(`https://ai-server-hazel.vercel.app/models/${model._id}`, {
                             method: "DELETE",
                             headers: {
                                 "Content-Type": "application/json",

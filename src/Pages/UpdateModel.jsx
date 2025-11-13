@@ -19,7 +19,7 @@ const UpdateModel = () => {
     useEffect(() => {
         const fetchModel = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/models/${id}`);
+                const res = await fetch(`https://ai-server-hazel.vercel.app/models/${id}`);
 
 
                 if (!res.ok) {
@@ -63,7 +63,7 @@ const UpdateModel = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://localhost:3000/models/${id}`, {
+            const res = await fetch(`https://ai-server-hazel.vercel.app/models/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -23,7 +23,7 @@ const AddModel = () => {
         e.preventDefault();
 
         try {
-            const res = await fetch('http://localhost:3000/models', {
+            const res = await fetch('https://ai-server-hazel.vercel.app/models', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

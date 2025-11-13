@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                loader: () => fetch('http://localhost:3000/models')
+                loader: () => fetch('https://ai-server-hazel.vercel.app/models')
             },
             {
                 path: "/auth/login",
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <ViewModel></ViewModel>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:3000/models')
+                loader: () => fetch('https://ai-server-hazel.vercel.app/models')
             }
             ,
             {
